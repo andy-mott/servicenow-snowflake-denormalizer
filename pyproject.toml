@@ -41,7 +41,7 @@ dev = [
 servicenow-denormalize = "denormalize:main"
 
 [project.urls]
-Repository = "https://github.com/andymott/servicenow-snowflake-denormalizer"
+Repository = "https://github.com/andy-mott/servicenow-snowflake-denormalizer"
 
 [tool.setuptools]
 py-modules = ["denormalize"]

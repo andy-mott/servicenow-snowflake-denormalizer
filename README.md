@@ -122,7 +122,7 @@ ALTER TASK DENORMALIZE_SERVICENOW_TASK RESUME;
 1. Clone this repo and create a virtual environment:
 
    ```bash
-   git clone https://github.com/andymott/servicenow-snowflake-denormalizer.git
+   git clone https://github.com/andy-mott/servicenow-snowflake-denormalizer.git
    cd servicenow-snowflake-denormalizer
    python3 -m venv venv
    source venv/bin/activate
