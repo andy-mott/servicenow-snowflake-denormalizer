@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "servicenow-snowflake-denormalizer"
+version = "1.0.0"
+description = "Create denormalized Snowflake views of ServiceNow tables synced via the Snowflake Connector"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    { name = "Andy Mott" },
+]
+keywords = ["snowflake", "servicenow", "denormalize", "connector", "etl"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+]
+dependencies = [
+    "snowflake-connector-python",
+    "python-dotenv",
+    "cryptography",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+[project.scripts]
+servicenow-denormalize = "denormalize:main"
+
+[project.urls]
+Repository = "https://github.com/andymott/servicenow-snowflake-denormalizer"
+
+[tool.setuptools]
+py-modules = ["denormalize"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["denormalize"]
