@@ -13,6 +13,8 @@ This tool creates `*__VIEW_DENORMALIZED` views that resolve both into human-read
 
 ## Two Deployment Modes
 
+Both modes produce identical `*__VIEW_DENORMALIZED` views. The Python CLI (`denormalize.py`) is a convenience wrapper that connects to Snowflake, discovers fields, and generates the same SQL that the Snowflake-native stored procedures produce. **Python is not required** &mdash; the Snowflake-native option (`setup.sql`) is fully self-contained using SQL and JavaScript stored procedures.
+
 | | Python CLI | Snowflake Native |
 |---|---|---|
 | **Best for** | Development, testing, one-off runs | Production, automated scheduling |
